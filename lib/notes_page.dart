@@ -76,11 +76,6 @@ class _NotesPageState extends State<NotesPage> {
                         color: note.status == 'important' ? Colors.yellow : null,
                         onPressed: () => _toggleNoteStatus(note, 'important'),
                       ),
-                      _buildStatusButton(
-                        icon: note.status == 'completed' ? Icons.check_circle : Icons.circle,
-                        color: note.status == 'completed' ? Colors.green : null,
-                        onPressed: () => _toggleNoteStatus(note, 'completed'),
-                      ),
                       IconButton(
                         onPressed: () => _deleteNoteWithConfirmation(note),
                         icon: const Icon(Icons.delete),
